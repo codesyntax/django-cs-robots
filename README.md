@@ -1,30 +1,36 @@
+# 🤖 Django CS Robots
 
-Arazorik ez! Hona hemen hobetutako `README.md` fitxategia, ingelesez eta emojiekin. 🤖✨
+A simple, database-free Django app to manage your `robots.txt` file directly from the admin interface.
 
----
+## ✨ Introduction
 
-#🤖 Django CS RobotsA simple, database-free Django app to manage your `robots.txt` file directly from the admin interface.
+This package provides a straightforward solution for allowing site administrators to edit the `robots.txt` file without developer intervention. Instead of storing the content in a database model, this app reads from and writes directly to a **physical file** on your server. The file's path is fully configurable in your project's `settings.py`.
 
-##✨ IntroductionThis package provides a straightforward solution for allowing site administrators to edit the `robots.txt` file without developer intervention. Instead of storing the content in a database model, this app reads from and writes directly to a **physical file** on your server. The file's path is fully configurable in your project's `settings.py`.
+## 🌟 Key Features
 
-##🌟 Key Features* **Edit in the Admin:** ✏️ Provides a simple and intuitive form within the Django admin to modify your `robots.txt` content.
+* **Edit in the Admin:** ✏️ Provides a simple and intuitive form within the Django admin to modify your `robots.txt` content.
 * **Database-Free:** 💾 Directly reads from and writes to a file on the filesystem, avoiding database overhead and migrations.
 * **Configurable Path:** ⚙️ You can specify the exact location of your `robots.txt` file in your `settings.py` for full control.
 * **Dynamic Serving:** 🌐 Includes a view that serves the `robots.txt` file dynamically, ensuring that any changes made in the admin are live immediately.
 * **Easy Integration:** 🔌 Designed to be a plug-and-play addition to any Django project.
 
-##🛠️ Installation & Setup###1. InstallationInstall the package from PyPI:
+## 🛠️ Installation & Setup
+
+### 1. Installation
+
+Install the package from PyPI:
 
 ```bash
 pip install django-cs-robots
-
 ```
 
-###2. `settings.py` ConfigurationAdd the app to your `INSTALLED_APPS` in `settings.py`. For the admin index page link to appear, place `'cs_robots'` before `'django.contrib.admin'`.
+### 2. `settings.py` Configuration
+
+Add the app to your INSTALLED_APPS in settings.py. For the admin index page link to appear, place 'cs_robots' before 'django.contrib.admin'.
 
 ```python
 # settings.py
-import os # Make sure you import os!
+import os
 
 INSTALLED_APPS = [
     'cs_robots', # 👈 Place before admin
@@ -35,10 +41,11 @@ INSTALLED_APPS = [
 # Define the absolute path to your robots.txt file
 # (e.g., inside your project's static directory)
 ROBOTS_TXT_PATH = os.path.join(BASE_DIR, 'static', 'robots.txt')
-
 ```
 
-###3. URL ConfigurationAdd the `cs_robots` paths to your project's `urls.py`.
+### 3. URL Configuration
+
+Add the cs_robots paths to your project's urls.py.
 
 ```python
 # your_project/urls.py
@@ -57,7 +64,8 @@ urlpatterns = [
 
     # ... other project urls
 ]
-
 ```
 
-##💖 ContributionsBug reports and feature requests are welcome!
+## 💖 Contributions
+
+Bug reports and feature requests are welcome!
