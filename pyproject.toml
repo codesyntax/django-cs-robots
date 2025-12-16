@@ -2,7 +2,7 @@
 
 [project]
 name = "django-cs-robots"
-version = "1.0.0"
+version = "1.0.1"
 
 authors = [
   { name="Jatsu Argarate", email="jargarae@codesyntax.com" },
