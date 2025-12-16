@@ -1,0 +1,5 @@
+tox
+pytest
+pytest-django
+pytest-cov
+coverage

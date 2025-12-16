@@ -1,0 +1,6 @@
+django_cs_robots.egg-info/
+.tox
+.mypy_cache
+.coverage
+.python-version
+**/__pycache__/**
