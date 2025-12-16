@@ -1,3 +1,6 @@
+[![Test Status](https://github.com/codesyntax/django-cs-robots/workflows/Test/badge.svg)](https://github.com/codesyntax/django-cs-robots/actions)
+[![PyPI Version](https://img.shields.io/pypi/v/django-cs-robots.svg)](https://pypi.python.org/pypi/django-cs-robots)
+
 # 🤖 Django CS Robots
 
 A simple, database-free Django app to manage your `robots.txt` file directly from the admin interface.
